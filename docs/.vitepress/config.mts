@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/yykm_docs/',
+  base: '/YYKM_docs/',
   title: "云影空蒙",
   description: "一款基于 Android 原生开发的电视直播空壳软件",
   themeConfig: {

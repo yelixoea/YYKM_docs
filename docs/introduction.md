@@ -2,6 +2,10 @@
 
 云影空蒙是一款基于 **Android 原生开发** 的电视直播空壳软件。本应用**不包含任何直播源**，用户需要自行添加直播源才能观看电视节目。
 
+Telegram 发布频道：[https://t.me/YYKM_release](https://t.me/YYKM_release)
+
+Telegram 讨论群：[https://t.me/+MYYHs77olb1mN2Zl](https://t.me/+MYYHs77olb1mN2Zl)
+
 ## 软件功能
 
 - 开机自启

@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: Github
       link: https://github.com/yelixoea/YYKM
+    - theme: alt
+      text: Telegram
+      link: https://t.me/YYKM_release
 
 features:
   - title: 订阅源

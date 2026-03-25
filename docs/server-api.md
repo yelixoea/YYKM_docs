@@ -216,3 +216,23 @@ APK文件二进制流
 ```
 200 OK
 ```
+
+## 调试JS
+
+**POST** `/api/js/evaluate`
+
+**请求示例**
+
+```javascript
+import 'lib/crypto-js.js'
+
+export function main() {
+  return "Hello, YYKM!" + params.id;
+}
+```
+
+**响应示例**
+
+```
+Hello, YYKM!123
+```

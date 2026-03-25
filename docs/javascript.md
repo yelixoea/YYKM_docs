@@ -26,6 +26,15 @@ export async function main() {
 }
 ```
 
+```javascript
+import 'lib/crypto-js.js' // 导入内置包
+import 'http://example.com/your-lib.js' // 导入外部包
+
+export function main() {
+  // 这里是你的代码
+}
+```
+
 ## 常用API
 
 ### Fetcher

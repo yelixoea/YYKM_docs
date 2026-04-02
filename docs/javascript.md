@@ -43,19 +43,13 @@ export function main() {
 
 ```javascript
 /**
- * fetch(url: string): Promise<string>
+ * fetch(url: string): string
  * 
  * @param {string} url - 订阅源链接，支持所有URI链接
- * @returns {Promise<string>} - 订阅源内容
+ * @returns {string} - 订阅源内容
  */
 (async () => {
   yykm.fetch('http://example.com/iptv.m3u8')
-    .then(content => {
-      console.log(content)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
@@ -67,16 +61,9 @@ export function main() {
  * 
  * @param {string} url - 订阅源链接，支持所有URI链接
  * @param {string} content - 订阅源内容
- * @returns {Promise<string>} - 修改后的订阅源内容
  */
 (async () => {
   yykm.modify('http://example.com/iptv.m3u8', content)
-    .then(content => {
-      console.log(content)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
@@ -86,22 +73,16 @@ export function main() {
 
 ```javascript
 /**
- * get(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, specParams: Map<string, string> | null): Promise<string>
+ * get(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, specParams: Map<string, string> | null): string
  * 
  * @param {string} url - 请求链接
  * @param {Map<string, any> | null} params - 请求参数
  * @param {Map<string, string> | null} headers - 请求头
  * @param {Map<string, string> | null} specParams - 特殊参数
- * @returns {Promise<string>} - 响应内容
+ * @returns {string} - 响应内容
  */
 (async () => {
   yykm.get('http://example.com/api/data', null, null, null)
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
@@ -109,23 +90,17 @@ export function main() {
 
 ```javascript
 /**
- * post(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): Promise<string>
+ * post(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): string
  * 
  * @param {string} url - 请求链接
  * @param {Map<string, any> | null} params - 请求参数
  * @param {Map<string, string> | null} headers - 请求头
  * @param {string | null} body - 请求体
  * @param {Map<string, string> | null} specParams - 特殊参数
- * @returns {Promise<string>} - 响应内容
+ * @returns {string} - 响应内容
  */
 (async () => {
   yykm.post('http://example.com/api/data', null, null, '{"key":"value"}', null)
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
@@ -133,23 +108,17 @@ export function main() {
 
 ```javascript
 /**
- * put(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): Promise<string>
+ * put(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): string
  * 
  * @param {string} url - 请求链接
  * @param {Map<string, any> | null} params - 请求参数
  * @param {Map<string, string> | null} headers - 请求头
  * @param {string | null} body - 请求体
  * @param {Map<string, string> | null} specParams - 特殊参数
- * @returns {Promise<string>} - 响应内容
+ * @returns {string} - 响应内容
  */
 (async () => {
   yykm.put('http://example.com/api/data', null, null, '{"key":"value"}', null)
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
@@ -157,23 +126,17 @@ export function main() {
 
 ```javascript
 /**
- * patch(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): Promise<string>
+ * patch(url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): string
  * 
  * @param {string} url - 请求链接
  * @param {Map<string, any> | null} params - 请求参数
  * @param {Map<string, string> | null} headers - 请求头
  * @param {string | null} body - 请求体
  * @param {Map<string, string> | null} specParams - 特殊参数
- * @returns {Promise<string>} - 响应内容
+ * @returns {string} - 响应内容
  */
 (async () => {
   yykm.patch('http://example.com/api/data', null, null, '{"key":"value"}', null)
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
@@ -181,7 +144,7 @@ export function main() {
 
 ```javascript
 /**
- * request(method: string, url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): Promise<Response>
+ * request(method: string, url: string, params: Map<string, any> | null, headers: Map<string, string> | null, body: string | null, specParams: Map<string, string> | null): Response
  * 
  * @param {string} method - 请求方法，如GET、POST、PUT、PATCH等
  * @param {string} url - 请求链接
@@ -189,7 +152,7 @@ export function main() {
  * @param {Map<string, string> | null} headers - 请求头
  * @param {string | null} body - 请求体
  * @param {Map<string, string> | null} specParams - 特殊参数
- * @returns {Promise<Response>} - 响应内容
+ * @returns {Response} - 响应内容
  * 
  * Response对象包含以下属性：
  * - code: number - 响应状态码
@@ -198,12 +161,6 @@ export function main() {
  */
 (async () => {
   yykm.request('PATCH', 'http://example.com/api/data', null, null, '{"key":"value"}', null)
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-      console.error(error)
-    })
 })();
 ```
 
